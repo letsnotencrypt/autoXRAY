@@ -7,7 +7,7 @@ Bash-скрипт для автоматической настройки ядр�
 
 **UPD3: Основной и Экспериментальный скрипты объединены, ss2022 удален.** 
 
-**UPD2: Описание неактуальных скриптов перемещено в [oldScriptReadme.md](https://github.com/xVRVx/autoXRAY/blob/main/old/oldScriptReadme.md).**
+**UPD2: Описание неактуальных скриптов перемещено в [oldScriptReadme.md](https://github.com/letsnotencrypt/autoXRAY/blob/main/old/oldScriptReadme.md).**
 
 **UPD1: Добавлен новый раздел — [построение моста RU -> EU](#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC-%D0%BC%D0%BE%D1%81%D1%82-ru---eu).**
 
@@ -23,7 +23,7 @@ Bash-скрипт для автоматической настройки ядр�
 Автоматически перенаправляет весь ру трафик напрямую.
 ```bash
 
-bash -c "$(curl -L https://raw.githubusercontent.com/xVRVx/autoXRAY/main/autoXRAY1.sh)" -- вашДОМЕН.com
+bash -c "$(curl -L https://raw.githubusercontent.com/letsnotencrypt/autoXRAY/main/autoXRAY1.sh)" -- вашДОМЕН.com
 ```
 
 **Вы получите:**
@@ -174,12 +174,12 @@ systemctl stop telemt; systemctl disable telemt; rm -f /etc/systemd/system/telem
 
 1) На заблокированный чистый VPS ставим стандартный рекомендованный скрипт и берем получившийся vless XHTTP reality EXTRA (конфиг №1):
 ```bash
-bash -c "$(curl -L https://raw.githubusercontent.com/xVRVx/autoXRAY/main/autoXRAY1.sh)" -- поддомен1.вашДОМЕН.com
+bash -c "$(curl -L https://raw.githubusercontent.com/letsnotencrypt/autoXRAY/main/autoXRAY1.sh)" -- поддомен1.вашДОМЕН.com
 
 ```
 2) На ru VPS ставим новый скрипт (здесь нам понадобится vless XHTTP reality EXTRA конфиг №1):
 ```bash
-bash -c "$(curl -L https://raw.githubusercontent.com/xVRVx/autoXRAY/main/autoXRAYselfRUbrEUxhttp.sh)" -- поддомен2.вашДОМЕН.com "vless://вашКонфигXHTTP"
+bash -c "$(curl -L https://raw.githubusercontent.com/letsnotencrypt/autoXRAY/main/autoXRAYselfRUbrEUxhttp.sh)" -- поддомен2.вашДОМЕН.com "vless://вашКонфигXHTTP"
 ```
 Установится прокси мост между серверами, итоговая цепочка: конфиг клиента -> ru VPS -> eu VPS -> зарубежный сайт
 
@@ -220,7 +220,7 @@ bash -c "$(curl -L https://raw.githubusercontent.com/xVRVx/autoXRAY/main/autoXRA
 
 После этого можно удалить WARP-cli, если это необходимо.
 
-**Если возникла ошбика при установке WARP** - [читайте инструкцию.](https://github.com/xVRVx/autoXRAY/blob/main/test/warp-readme.md)
+**Если возникла ошбика при установке WARP** - [читайте инструкцию.](https://github.com/letsnotencrypt/autoXRAY/blob/main/test/warp-readme.md)
 
 ===========================================================================
 # Сборка с MTProto proxy FakeTLS для ТГ
