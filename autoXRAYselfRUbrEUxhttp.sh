@@ -320,7 +320,7 @@ WEB_PATH="/var/www/$DOMAIN"
 mkdir -p "$WEB_PATH"
 
 # Генерируем сайт маскировку
-bash -c "$(curl -sL https://github.com/xVRVx/autoXRAY/raw/refs/heads/main/test/gen_page3.sh)" -- "$WEB_PATH"
+bash -c "$(curl -sL https://github.com/letsnotencrypt/autoXRAY/raw/refs/heads/main/test/gen_page3.sh)" -- "$WEB_PATH"
 
 # Установка Xray
 bash -c "$(curl -sL https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version v26.7.28
@@ -938,7 +938,7 @@ configListLink="https://$DOMAIN/$path_subpage.html"
 
 if [ "$INSTALL_MTP" = true ]; then
     echo -e "\n\n${GRN}Устанавливаем MTProto FakeTLS ${NC}"
-    source <(curl -sL https://github.com/xVRVx/autoXRAY/raw/refs/heads/main/test/telemt-test.sh)
+    source <(curl -sL https://github.com/letsnotencrypt/autoXRAY/raw/refs/heads/main/test/telemt-test.sh)
 else
     echo -e "\n\n${YEL}Установка MTProto FakeTLS пропущена.${NC}"
     MTProto=""
@@ -1032,7 +1032,7 @@ cat >> "$WEB_PATH/$path_subpage.html" <<EOF
     <button class="btn-action qr-btn" onclick="showQR('cAll')">QR</button>
 </div>
 
-<div><a style="color:white;margin:40px auto 20px;display:block;text-align:center;" href="https://github.com/xVRVx/autoXRAY">https://github.com/xVRVx/autoXRAY</a></div>
+<div><a style="color:white;margin:40px auto 20px;display:block;text-align:center;" href="https://github.com/letsnotencrypt/autoXRAY">https://github.com/letsnotencrypt/autoXRAY</a></div>
 
 <div id="qrModal" class="modal-overlay"><div class="modal-content"><div id="qrcode"></div><button class="close-modal-btn" onclick="closeModal()">Close</button></div></div>
 </body></html>
